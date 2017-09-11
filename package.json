@@ -7,7 +7,7 @@
     "url": "git://github.com/giovanettid/js-starter.git"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "author": "Didier Giovanetti",
   "license": "ISC",
