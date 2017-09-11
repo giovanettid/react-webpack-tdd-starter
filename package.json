@@ -1,0 +1,14 @@
+{
+  "name": "js-starter",
+  "version": "0.0.1",
+  "description": "js starter",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/giovanettid/js-starter.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Didier Giovanetti",
+  "license": "ISC"
+}
