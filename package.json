@@ -8,7 +8,8 @@
   },
   "scripts": {
     "test": "jest",
-    "coverage": "jest --coverage"
+    "coverage": "jest --coverage",
+    "e2e": "wdio test/e2e/wdio.conf.js"
   },
   "author": "Didier Giovanetti",
   "license": "ISC",
