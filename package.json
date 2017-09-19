@@ -7,6 +7,7 @@
     "url": "git://github.com/giovanettid/js-starter.git"
   },
   "scripts": {
+    "precommit": "run-p lint coverage",
     "lint": "eslint . src test --ext .js",
     "test": "jest",
     "coverage": "jest --coverage",
