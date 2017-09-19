@@ -1,8 +1,7 @@
 module.exports = {
   "globals": {
-    "it": true,
-    "expect": true,
-    "browser": true
-  },
-  "extends": "airbnb"
+    "it": false,
+    "expect": false,
+    "browser": false
+  }
 };
