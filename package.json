@@ -11,7 +11,8 @@
     "lint": "eslint . src test --ext .js",
     "test": "jest",
     "coverage": "jest --coverage",
-    "e2e": "wdio test/e2e/wdio.conf.js"
+    "e2e": "wdio test/e2e/wdio.conf.js",
+    "quality": "plato -t 'project-title' -d report -r src/"
   },
   "author": "Didier Giovanetti",
   "license": "ISC",
