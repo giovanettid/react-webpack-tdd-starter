@@ -47,5 +47,8 @@
         "statements": 100
       }
     }
+  },
+  "config": {
+    "buildDir": "build"
   }
 }
