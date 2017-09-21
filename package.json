@@ -8,7 +8,9 @@
   },
   "scripts": {
     "precommit": "run-p lint coverage",
-    "lint": "eslint . src test --ext .js",
+    "lint": "run-p lint:*",
+    "lint:js": "eslint . src test --ext .js",
+    "lint:sass": "sass-lint -v -q",
     "test": "jest",
     "coverage": "jest --coverage",
     "e2e": "wdio test/e2e/wdio.conf.js",
