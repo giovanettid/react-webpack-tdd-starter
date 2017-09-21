@@ -18,6 +18,9 @@ report
 # Dependency directories
 node_modules/
 
+# Build directories
+build/
+
 # Optional npm cache directory
 .npm
 
