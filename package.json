@@ -17,7 +17,8 @@
     "build": "run-p build:*",
     "build:html": "cp src/index.html $npm_package_config_buildDir",
     "build:js": "cp -R src/components $npm_package_config_buildDir",
-    "build:images": "cp -R src/images $npm_package_config_buildDir"
+    "build:images": "cp -R src/images $npm_package_config_buildDir",
+    "build:fonts": "cp -R src/fonts $npm_package_config_buildDir"
   },
   "author": "Didier Giovanetti",
   "license": "ISC",
