@@ -18,7 +18,8 @@
     "build:html": "cp src/index.html $npm_package_config_buildDir",
     "build:js": "cp -R src/components $npm_package_config_buildDir",
     "build:images": "cp -R src/images $npm_package_config_buildDir",
-    "build:fonts": "cp -R src/fonts $npm_package_config_buildDir"
+    "build:fonts": "cp -R src/fonts $npm_package_config_buildDir",
+    "build:style": "node-sass src/styles -o $npm_package_config_buildDir/styles"
   },
   "author": "Didier Giovanetti",
   "license": "ISC",
