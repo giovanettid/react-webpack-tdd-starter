@@ -63,7 +63,12 @@
         "lines": 100,
         "statements": 100
       }
-    }
+    },
+    "moduleDirectories": [
+      "node_modules",
+      "src",
+      "test/unit"
+    ]
   },
   "config": {
     "buildDir": "build"
