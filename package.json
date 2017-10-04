@@ -20,6 +20,7 @@
     "prebuild": "rm -rf $npm_package_config_buildDir && mkdir -p $npm_package_config_buildDir",
     "build": "run-p build:*",
     "build:html": "cp src/index.html $npm_package_config_buildDir",
+    "build:polyfill": "cp node_modules/babel-polyfill/dist/polyfill.min.js $npm_package_config_buildDir/polyfill.min.js",
     "build:js": "babel src/components --out-file $npm_package_config_buildDir/main.js --source-maps inline",
     "build:images": "cp -R src/images $npm_package_config_buildDir",
     "build:fonts": "cp -R src/fonts $npm_package_config_buildDir",
