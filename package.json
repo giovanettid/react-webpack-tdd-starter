@@ -25,7 +25,7 @@
     "build:images": "cp -R src/images $npm_package_config_buildDir",
     "build:fonts": "cp -R src/fonts $npm_package_config_buildDir",
     "build:style": "run-s build:style:*",
-    "build:style:sass": "node-sass src/styles -o $npm_package_config_buildDir/styles",
+    "build:style:sass": "node-sass --source-map true --source-map-contents src/styles -o $npm_package_config_buildDir/styles",
     "build:style:autoprefixer": "postcss -u autoprefixer -r $npm_package_config_buildDir/styles/**/*.css"
   },
   "author": "Didier Giovanetti",
