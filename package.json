@@ -27,7 +27,7 @@
     "build:style": "run-s build:style:sass watch:sass build:style:autoprefixer",
     "build:style:sass": "node-sass --source-map true --source-map-contents src/styles -o $npm_package_config_buildDir/styles",
     "watch:sass": "pkill -f node-sass || true && npm run build:style:sass -- -w &",
-    "build:style:autoprefixer": "postcss -u autoprefixer -r $npm_package_config_buildDir/styles/**/*.css"
+    "build:style:autoprefixer": "pkill -f postcss || true && postcss -u autoprefixer -r $npm_package_config_buildDir/styles/**/*.css --watch --poll &"
   },
   "author": "Didier Giovanetti",
   "license": "ISC",
