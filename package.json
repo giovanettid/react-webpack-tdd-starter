@@ -24,8 +24,9 @@
     "build:js": "pkill -f babel || true && babel src/components --watch --out-file $npm_package_config_buildDir/main.js --source-maps inline &",
     "build:images": "cp -R src/images $npm_package_config_buildDir",
     "build:fonts": "cp -R src/fonts $npm_package_config_buildDir",
-    "build:style": "run-s build:style:*",
+    "build:style": "run-s build:style:sass watch:sass build:style:autoprefixer",
     "build:style:sass": "node-sass --source-map true --source-map-contents src/styles -o $npm_package_config_buildDir/styles",
+    "watch:sass": "pkill -f node-sass || true && npm run build:style:sass -- -w &",
     "build:style:autoprefixer": "postcss -u autoprefixer -r $npm_package_config_buildDir/styles/**/*.css"
   },
   "author": "Didier Giovanetti",
