@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
   entry: {
@@ -26,4 +27,10 @@ module.exports = {
   resolve: {
     modules: [path.resolve(__dirname, 'src'), 'node_modules'],
   },
+  plugins: [
+    new webpack.SourceMapDevToolPlugin({
+      filename: '[name].js.map',
+      exclude: ['polyfill.js'],
+    }),
+  ],
 };
