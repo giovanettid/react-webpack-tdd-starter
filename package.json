@@ -66,6 +66,10 @@
   },
   "jest": {
     "testRegex": "test/unit/(.*).test.js$",
+    "collectCoverageFrom": [
+      "src/components/**/*.js",
+      "!src/components/main.js"
+    ],
     "setupTestFrameworkScriptFile": "<rootDir>/test/unit/setup-test-framework-script.js",
     "coverageThreshold": {
       "global": {
