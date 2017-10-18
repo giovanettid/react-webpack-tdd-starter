@@ -1,4 +1,4 @@
-const sum = (a, b) => a + b;
+import Application from 'components/Application';
 
-export default sum;
+Application.start();
 
