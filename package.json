@@ -65,6 +65,7 @@
     "webpack": "^3.7.1"
   },
   "jest": {
+    "testRegex": "test/unit/(.*).test.js$",
     "setupTestFrameworkScriptFile": "<rootDir>/test/unit/setup-test-framework-script.js",
     "coverageThreshold": {
       "global": {
