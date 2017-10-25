@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -12,6 +13,17 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.scss$/,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: [{
+            loader: 'css-loader',
+          }, {
+            loader: 'sass-loader',
+          }],
+        }),
+      },
       {
         test: /\.js$/,
         exclude: /node_modules/,
@@ -28,7 +40,6 @@ module.exports = {
           loader: 'file-loader',
           options: {
             name: 'fonts/[name][hash].[ext]',
-            publicPath: '../',
           },
         },
       },
@@ -48,8 +59,9 @@ module.exports = {
   },
   plugins: [
     new webpack.SourceMapDevToolPlugin({
-      filename: '[name].js.map',
+      filename: '[file].map',
       exclude: ['polyfill.js'],
     }),
+    new ExtractTextPlugin('bundle.css'),
   ],
 };
