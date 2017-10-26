@@ -1,8 +1,7 @@
-import png from 'images/hello.png';
+import 'components/Application.scss';
 
 export default class {
   static start() {
-    document.querySelector('div.Application').innerHTML = '<img>js starter...';
-    document.querySelector('img').src = png;
+    document.querySelector('div.Application').innerHTML = "<div class='starter'>js starter...</div>";
   }
 }
