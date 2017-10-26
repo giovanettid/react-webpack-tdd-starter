@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
@@ -69,6 +70,10 @@ module.exports = {
     modules: [path.resolve(__dirname, 'src'), 'node_modules'],
   },
   plugins: [
+    new HtmlWebpackPlugin({
+      title: 'js starter',
+      template: './src/index.ejs',
+    }),
     new webpack.SourceMapDevToolPlugin({
       filename: '[file].map',
       exclude: ['polyfill.js'],
