@@ -1,4 +1,5 @@
 const glob = require('glob');
+const chai = require('chai');
 
 exports.config = {
 
@@ -74,7 +75,7 @@ exports.config = {
   //
   // Set a base URL in order to shorten url command calls. If your url parameter starts
   // with "/", then the base url gets prepended.
-  baseUrl: 'http://localhost',
+  baseUrl: 'http://localhost:3000',
   //
   // Default timeout for all waitFor* commands.
   waitforTimeout: 10000,
@@ -174,8 +175,9 @@ exports.config = {
    * @param {Array.<Object>} capabilities list of capabilities details
    * @param {Array.<String>} specs List of spec file paths that are to be run
    */
-  // before: function (capabilities, specs) {
-  // },
+  before() {
+    global.expect = chai.expect;
+  },
   //
   /**
    * Hook that gets executed before the suite starts

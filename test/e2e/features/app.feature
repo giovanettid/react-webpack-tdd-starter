@@ -1,4 +1,5 @@
-Feature: App
+Feature: Starter
 
-  Scenario: Hello
-    When Hello
+  Scenario: Hello js starter
+    When Go js starter
+    Then Says "js starter..."
