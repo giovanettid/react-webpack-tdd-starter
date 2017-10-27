@@ -18,16 +18,7 @@
     "e2e": "wdio test/e2e/wdio.conf.js",
     "quality": "plato -t 'project-title' -d report -r src/",
     "prebuild": "rm -rf $npm_package_config_buildDir && mkdir -p $npm_package_config_buildDir",
-    "build": "NODE_ENV=production webpack --config webpack.config.js -p",
-    "build:html": "cp src/index.html $npm_package_config_buildDir",
-    "build:polyfill": "cp node_modules/babel-polyfill/dist/polyfill.min.js $npm_package_config_buildDir/polyfill.min.js",
-    "build:js": "pkill -f babel || true && babel src/components --watch --out-file $npm_package_config_buildDir/main.js --source-maps inline &",
-    "build:images": "cp -R src/images $npm_package_config_buildDir",
-    "build:fonts": "cp -R src/fonts $npm_package_config_buildDir",
-    "build:style": "run-s build:style:sass watch:sass build:style:autoprefixer",
-    "build:style:sass": "node-sass --source-map true --source-map-contents src/styles -o $npm_package_config_buildDir/styles",
-    "watch:sass": "pkill -f node-sass || true && npm run build:style:sass -- -w &",
-    "build:style:autoprefixer": "pkill -f postcss || true && postcss -u autoprefixer -r $npm_package_config_buildDir/styles/**/*.css --watch --poll &"
+    "build": "NODE_ENV=production webpack --config webpack.config.js -p"
   },
   "author": "Didier Giovanetti",
   "license": "ISC",
