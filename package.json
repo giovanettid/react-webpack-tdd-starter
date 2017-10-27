@@ -7,7 +7,7 @@
     "url": "git://github.com/giovanettid/js-starter.git"
   },
   "scripts": {
-    "start": "run-s build server",
+    "start": "webpack-dev-server --hot",
     "server": "browser-sync start -s $npm_package_config_buildDir -f $npm_package_config_buildDir",
     "precommit": "run-p lint coverage",
     "lint": "run-p lint:*",
