@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "webpack-dev-server --hot",
-    "server": "browser-sync start -s $npm_package_config_buildDir -f $npm_package_config_buildDir",
+    "server:build": "npm run build && browser-sync start -s $npm_package_config_buildDir",
     "precommit": "run-p lint coverage",
     "lint": "run-p lint:*",
     "lint:js": "eslint . src test --ext .js",
