@@ -68,7 +68,8 @@
     "wdio-selenium-standalone-service": "0.0.9",
     "wdio-spec-reporter": "^0.1.2",
     "webdriverio": "^4.8.0",
-    "webpack": "^3.7.1"
+    "webpack": "^3.7.1",
+    "webpack-dev-server": "^2.9.3"
   },
   "jest": {
     "testRegex": "test/unit/(.*).test.js$",
