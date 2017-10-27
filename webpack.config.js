@@ -6,10 +6,10 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
   entry: {
     polyfill: ['babel-polyfill'],
-    bundle: ['./src/components/main.js'],
+    app: ['./src/components/main.js'],
   },
   output: {
-    filename: '[name].js',
+    filename: '[name].[hash].bundle.js',
     path: path.resolve(__dirname, 'build'),
   },
   module: {
@@ -51,7 +51,7 @@ module.exports = {
         use: {
           loader: 'file-loader',
           options: {
-            name: 'fonts/[name][hash].[ext]',
+            name: 'fonts/[name].[hash].[ext]',
           },
         },
       },
@@ -60,7 +60,7 @@ module.exports = {
         use: {
           loader: 'file-loader',
           options: {
-            name: 'images/[name][hash].[ext]',
+            name: 'images/[name].[hash].[ext]',
           },
         },
       },
@@ -76,8 +76,8 @@ module.exports = {
     }),
     new webpack.SourceMapDevToolPlugin({
       filename: '[file].map',
-      exclude: ['polyfill.js'],
+      exclude: /polyfill.*\.js$/,
     }),
-    new ExtractTextPlugin('bundle.css'),
+    new ExtractTextPlugin('styles.[hash].bundle.css'),
   ],
 };
