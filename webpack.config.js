@@ -69,6 +69,9 @@ module.exports = {
   resolve: {
     modules: [path.resolve(__dirname, 'src'), 'node_modules'],
   },
+  devServer: {
+    contentBase: path.join(__dirname, 'src'),
+  },
   plugins: [
     new HtmlWebpackPlugin({
       title: 'js starter',
