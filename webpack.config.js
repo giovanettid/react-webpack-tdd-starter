@@ -72,6 +72,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: 'js starter',
+      favicon: './src/images/favicon.ico',
       template: './src/index.ejs',
     }),
     new webpack.SourceMapDevToolPlugin({
