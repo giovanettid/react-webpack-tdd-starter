@@ -3,7 +3,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-module.exports = {
+const config = {
   entry: {
     polyfill: ['babel-polyfill'],
     app: ['./src/components/main.js'],
@@ -78,10 +78,15 @@ module.exports = {
       favicon: './src/images/favicon.ico',
       template: './src/index.ejs',
     }),
-    new webpack.SourceMapDevToolPlugin({
-      filename: '[file].map',
-      exclude: /polyfill.*\.js$/,
-    }),
     new ExtractTextPlugin('styles.[hash].bundle.css'),
   ],
 };
+
+if (process.env.NODE_ENV !== 'production') {
+  config.plugins.push(new webpack.SourceMapDevToolPlugin({
+    filename: '[file].map',
+    exclude: /polyfill.*\.js$/,
+  }));
+}
+
+module.exports = config;
