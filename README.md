@@ -26,3 +26,12 @@
 
  ``` npm run quality```
  
+## Build in production mode
+ 
+ ``` npm run build```
+ 
+## Serve in production mode
+ 
+ ``` npm run server:build```
+
+ 
