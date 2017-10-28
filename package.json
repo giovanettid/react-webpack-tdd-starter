@@ -13,8 +13,8 @@
     "lint": "run-p lint:*",
     "lint:js": "eslint . src test --ext .js",
     "lint:sass": "sass-lint -v -q",
-    "test": "jest",
-    "coverage": "jest --coverage",
+    "test": "jest --config test/unit/jest.config.json",
+    "coverage": "jest --config test/unit/jest.config.json --coverage",
     "e2e": "wdio test/e2e/wdio.conf.js",
     "quality": "plato -t 'project-title' -d report -r src/",
     "prebuild": "rm -rf $npm_package_config_buildDir && mkdir -p $npm_package_config_buildDir",
@@ -61,31 +61,6 @@
     "webdriverio": "^4.8.0",
     "webpack": "^3.7.1",
     "webpack-dev-server": "^2.9.3"
-  },
-  "jest": {
-    "testRegex": "test/unit/(.*).test.js$",
-    "collectCoverageFrom": [
-      "src/components/**/*.js",
-      "!src/components/main.js"
-    ],
-    "setupTestFrameworkScriptFile": "<rootDir>/test/unit/setup-test-framework-script.js",
-    "coverageThreshold": {
-      "global": {
-        "branches": 100,
-        "functions": 100,
-        "lines": 100,
-        "statements": 100
-      }
-    },
-    "moduleDirectories": [
-      "node_modules",
-      "src",
-      "test/unit"
-    ],
-    "moduleNameMapper": {
-      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/test/unit/fileMock.js",
-      "\\.(css|scss)$": "<rootDir>/test/unit/styleMock.js"
-    }
   },
   "config": {
     "buildDir": "build"
