@@ -6,7 +6,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const config = {
   entry: {
     polyfill: ['babel-polyfill'],
-    app: ['./src/components/main.js'],
+    app: ['./src/components/main.jsx'],
   },
   output: {
     filename: '[name].[hash].bundle.js',
@@ -68,6 +68,7 @@ const config = {
   },
   resolve: {
     modules: [path.resolve(__dirname, 'src'), 'node_modules'],
+    extensions: ['.js', '.jsx'],
   },
   devServer: {
     contentBase: path.join(__dirname, 'src'),
