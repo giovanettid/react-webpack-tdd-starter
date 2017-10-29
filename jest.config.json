@@ -1,8 +1,8 @@
 {
-  "testRegex": "test/unit/(.*).test.js$",
+  "testRegex": "test/unit/(.*).test\\.(js|jsx)$",
     "collectCoverageFrom": [
-    "src/components/**/*.js",
-    "!src/components/main.js"
+    "src/components/**/*.{js,jsx}",
+    "!src/components/main.jsx"
   ],
     "setupTestFrameworkScriptFile": "<rootDir>/test/unit/setup-test-framework-script.js",
     "coverageThreshold": {
