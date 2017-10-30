@@ -16,7 +16,7 @@
     "test": "jest --config jest.config.json",
     "coverage": "jest --config jest.config.json --coverage",
     "e2e": "wdio test/e2e/wdio.conf.js",
-    "quality": "plato -t 'project-title' -d report -r src/",
+    "quality": "es6-plato -t 'project-title' -d report -r src/",
     "prebuild": "rm -rf $npm_package_config_buildDir && mkdir -p $npm_package_config_buildDir",
     "build": "NODE_ENV=production webpack --config webpack.config.js -p"
   },
@@ -39,6 +39,7 @@
     "cucumber": "^3.0.2",
     "enzyme": "^3.1.0",
     "enzyme-adapter-react-16": "^1.0.2",
+    "es6-plato": "^1.0.14",
     "eslint": "^4.7.0",
     "eslint-config-airbnb": "^15.1.0",
     "eslint-plugin-import": "^2.7.0",
