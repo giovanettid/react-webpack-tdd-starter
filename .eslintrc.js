@@ -4,8 +4,14 @@ module.exports = {
     "document": false
   },
   "plugins": [
-    "import"
+    "import",
+    "react"
   ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
   settings: {
     "import/resolver": {
       "node" : {

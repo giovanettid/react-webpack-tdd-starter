@@ -11,7 +11,7 @@
     "server:build": "npm run build && browser-sync start -s $npm_package_config_buildDir",
     "precommit": "run-p lint coverage",
     "lint": "run-p lint:*",
-    "lint:js": "eslint . src test --ext .js",
+    "lint:js": "eslint . src test --ext .js,.jsx",
     "lint:sass": "sass-lint -v -q",
     "test": "jest --config jest.config.json",
     "coverage": "jest --config jest.config.json --coverage",
