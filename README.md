@@ -2,24 +2,24 @@
 
 ## Dependencies
 * sources
-  * fwk: reactjs
+  * fwk: [reactjs](https://reactjs.org)
   * language: es next
-  * style: sass
+  * style: [sass](http://sass-lang.com)
 * tests
-  * runner: jest
-  * react utils: enzyme
-  * assertions: chai
-  * doubles: sinon
-  * functional: cucumber
-  * e2e: webdriverio
+  * runner: [jest](https://facebook.github.io/jest/)
+  * react utils: [enzyme](http://airbnb.io/enzyme/)
+  * assertions: [chai](http://chaijs.com)
+  * doubles: [sinon](http://sinonjs.org)
+  * functional: [cucumber](https://cucumber.io)
+  * e2e: [webdriverio](http://webdriver.io)
 * tooling
   * package manager: npm 5
   * tasks: npm scripts
-  * transpiler: babel
-  * bundler: webpack 3
-  * linters: eslint, sass-lint
-  * quality: es6-plato
-  * git hooks: husky
+  * transpiler: [babel](https://babeljs.io)
+  * bundler: [webpack 3](https://webpack.js.org)
+  * linters: [eslint](https://eslint.org), [sass-lint](https://github.com/sasstools/sass-lint)
+  * quality: [es6-plato](https://github.com/the-simian/es6-plato)
+  * git hooks: [husky](https://github.com/typicode/husky)
  
 
 ## Starter features
