@@ -23,24 +23,7 @@
  
 
 ## Starter features
-* directory layout (src, test, ...)
-* npm scripts for tasks
-* webpack loaders config (jsx, styles, fonts, images)
-* webpack plugins config (index html, extract css, sourcemaps)
-* webpack dev server
-* check production build with browser-sync
-* postcss config with autoprefixer plugin
-* jest config (coverage, mocks assets)
-* setup tests fwk (globals, adapter, node polyfill)
-* webdriverio e2e runner config (wdio)
-* babel config (es next, react)
-* eslint config (airbnb, react, jsx, es imports, globals)
-* sass lint rules
-* sample hello react app
-* sample hello tests (unit, e2e)
-* .gitignore
-* .editorconfig
-
+* see CHANGELOG.md
 
 ## Pré requis
 * npm 5
