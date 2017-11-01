@@ -4,14 +4,17 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
+const buildDir = 'build';
+const sourceDir = 'src';
+
 const config = {
   entry: {
     polyfill: ['babel-polyfill'],
-    app: ['./src/components/main.js'],
+    app: [`./${sourceDir}/components/main.js`],
   },
   output: {
     filename: '[name].[hash].bundle.js',
-    path: path.resolve(__dirname, 'build'),
+    path: path.resolve(__dirname, buildDir),
   },
   module: {
     rules: [
@@ -68,17 +71,17 @@ const config = {
     ],
   },
   resolve: {
-    modules: [path.resolve(__dirname, 'src'), 'node_modules'],
+    modules: [path.resolve(__dirname, sourceDir), 'node_modules'],
   },
   devServer: {
-    contentBase: path.join(__dirname, 'src'),
+    contentBase: path.join(__dirname, sourceDir),
   },
   plugins: [
-    new CleanWebpackPlugin(['build']),
+    new CleanWebpackPlugin([buildDir]),
     new HtmlWebpackPlugin({
       title: 'js starter',
-      favicon: './src/images/favicon.ico',
-      template: './src/index.ejs',
+      favicon: `./${sourceDir}/images/favicon.ico`,
+      template: `./${sourceDir}/index.ejs`,
     }),
     new ExtractTextPlugin('styles.[hash].bundle.css'),
   ],
