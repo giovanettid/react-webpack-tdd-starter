@@ -17,7 +17,6 @@
     "coverage": "jest --config jest.config.json --coverage",
     "e2e": "wdio test/e2e/wdio.conf.js",
     "quality": "es6-plato -t 'project-title' -d report -r src/",
-    "prebuild": "rm -rf $npm_package_config_buildDir && mkdir -p $npm_package_config_buildDir",
     "build": "NODE_ENV=production webpack --config webpack.config.js -p"
   },
   "author": "Didier Giovanetti",
@@ -35,6 +34,7 @@
     "babel-preset-react": "^6.24.1",
     "browser-sync": "^2.18.13",
     "chai": "^4.1.2",
+    "clean-webpack-plugin": "^0.1.17",
     "css-loader": "^0.28.7",
     "cucumber": "^3.0.2",
     "enzyme": "^3.1.0",
