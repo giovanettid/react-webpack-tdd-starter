@@ -23,7 +23,7 @@
  
 
 ## Starter features
-* see CHANGELOG.md
+* see [CHANGELOG](CHANGELOG.md)
 
 ## Pré requis
 * npm 5
