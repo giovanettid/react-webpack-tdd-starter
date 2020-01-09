@@ -1,3 +1,9 @@
+### Version 1.0.2
+
+#### Features
+
+* add es object-rest-spread and class-properties support
+
 ### Version 1.0.1
 
 #### Features
