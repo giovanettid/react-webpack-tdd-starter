@@ -1,3 +1,11 @@
+### Version 1.1.0
+
+#### Features
+
+* update wedriverio dependencies to version 5
+* update cucumber to version 6
+* update cucumber example step definition
+ 
 ### Version 1.0.2
 
 #### Features
