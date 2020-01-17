@@ -5,6 +5,7 @@ module.exports = {
     "beforeAll": false,
     "expect": false,
     "shallow": false,
-    "browser": false
+    "browser": false,
+    "$": false
   }
 };
