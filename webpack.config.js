@@ -7,6 +7,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const devMode = process.env.NODE_ENV !== 'production';
 const buildDir = 'build';
 const sourceDir = 'src';
+const stylesDir = `${sourceDir}/styles`;
 
 const config = {
   mode: process.env.NODE_ENV || 'development',
@@ -42,6 +43,9 @@ const config = {
           loader: 'sass-loader',
           options: {
             sourceMap: true,
+            sassOptions: {
+              includePaths: [path.resolve(__dirname, stylesDir)],
+            },
           },
         }],
       },
