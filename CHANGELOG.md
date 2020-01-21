@@ -1,3 +1,11 @@
+### Version 1.2.0
+
+#### Features
+
+* update webpack to version 4
+* replace webpack ExtractTextPlugin by MiniCssExtractPlugin
+* add hot module replace for sass files
+
 ### Version 1.1.0
 
 #### Features
