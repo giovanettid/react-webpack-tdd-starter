@@ -1,13 +1,16 @@
 const path = require('path');
 const webpack = require('webpack');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
+const devMode = process.env.NODE_ENV !== 'production';
 const buildDir = 'build';
 const sourceDir = 'src';
 
 const config = {
+  mode: process.env.NODE_ENV || 'development',
+  devtool: false,
   entry: {
     polyfill: ['babel-polyfill'],
     app: [`./${sourceDir}/components/main.jsx`],
@@ -20,25 +23,27 @@ const config = {
     rules: [
       {
         test: /\.scss$/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: [{
-            loader: 'css-loader',
-            options: {
-              sourceMap: true,
-            },
-          }, {
-            loader: 'postcss-loader',
-            options: {
-              sourceMap: true,
-            },
-          }, {
-            loader: 'sass-loader',
-            options: {
-              sourceMap: true,
-            },
-          }],
-        }),
+        use: [{
+          loader: MiniCssExtractPlugin.loader,
+          options: {
+            hmr: devMode,
+          },
+        }, {
+          loader: 'css-loader',
+          options: {
+            sourceMap: true,
+          },
+        }, {
+          loader: 'postcss-loader',
+          options: {
+            sourceMap: true,
+          },
+        }, {
+          loader: 'sass-loader',
+          options: {
+            sourceMap: true,
+          },
+        }],
       },
       {
         test: /\.(js|jsx)$/,
@@ -79,17 +84,19 @@ const config = {
     contentBase: path.join(__dirname, sourceDir),
   },
   plugins: [
-    new CleanWebpackPlugin([buildDir]),
+    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: 'js starter',
       favicon: `./${sourceDir}/images/favicon.ico`,
       template: `./${sourceDir}/index.ejs`,
     }),
-    new ExtractTextPlugin('styles.[hash].bundle.css'),
+    new MiniCssExtractPlugin({
+      filename: `styles.bundle${devMode ? '' : '.[hash]'}.css`,
+    }),
   ],
 };
 
-if (process.env.NODE_ENV !== 'production') {
+if (devMode) {
   config.plugins.push(new webpack.SourceMapDevToolPlugin({
     filename: '[file].map',
     exclude: /polyfill.*\.js$/,
