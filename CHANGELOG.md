@@ -1,3 +1,15 @@
+### Version 1.3.0
+
+#### Features
+
+* update babel to version 7
+* remove deprecated babel-polyfill
+* remove polyfill bundle
+* add only necessary core-js polyfills
+* update eslint to version 6
+* update husky
+* update jest
+
 ### Version 1.2.0
 
 #### Features
@@ -13,7 +25,7 @@
 * update wedriverio dependencies to version 5
 * update cucumber to version 6
 * update cucumber example step definition
- 
+
 ### Version 1.0.2
 
 #### Features
