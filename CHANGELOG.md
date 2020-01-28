@@ -1,3 +1,11 @@
+### Version 1.4.0
+
+#### Features
+
+* update node-sass, postcss, autoprefixer dependencies
+* remove deprecated sass-lint
+* add stylelint css, sass linter
+
 ### Version 1.3.0
 
 #### Features
