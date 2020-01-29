@@ -1,3 +1,10 @@
+### Version 1.5.0
+
+#### Features
+
+* update react dependencies
+* update chai, sinon, enzyme dependencies
+
 ### Version 1.4.0
 
 #### Features
