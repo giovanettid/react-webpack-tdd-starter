@@ -1,3 +1,11 @@
+### Version 1.5.1
+
+#### Minor
+
+* update outdated dependencies
+* update tooling dependencies
+* fix warns on peer dependencies
+
 ### Version 1.5.0
 
 #### Features
