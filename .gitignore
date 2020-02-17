@@ -12,11 +12,9 @@ pids
 # Coverage directory used by tools like istanbul
 coverage
 
-# Report directories
-report
+# Reports directory
+reports
 
-# Screenshot directories
-errorShots
 
 # Dependency directories
 node_modules/

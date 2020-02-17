@@ -1,6 +1,6 @@
 /build/**
 /coverage/**
-/report/**
+/reports/**
 /node_modules/**
 /docs/**
 /jsdoc/**
