@@ -12,6 +12,7 @@
   * doubles: [sinon](http://sinonjs.org)
   * functional: [cucumber](https://cucumber.io)
   * e2e: [webdriverio](http://webdriver.io)
+  * e2e report: [multiple-cucumber-html-reporter](https://github.com/wswebcreation/multiple-cucumber-html-reporter)
 * tooling
   * package manager: npm 6
   * tasks: npm scripts
