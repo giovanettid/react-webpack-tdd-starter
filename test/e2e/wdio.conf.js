@@ -2,6 +2,10 @@ const glob = require('glob');
 const mkdirp = require('mkdirp');
 const uuidv4 = require('uuid/v4');
 const chai = require('chai');
+const { generate } = require('multiple-cucumber-html-reporter');
+const { removeSync } = require('fs-extra');
+
+const reportsDir = 'reports/e2e';
 
 exports.config = {
 
@@ -83,7 +87,7 @@ exports.config = {
   // bail (default is 0 - don't bail, run all tests).
   bail: 0,
   // Saves a screenshot to a given path if a command fails.
-  screenshotPath: './errorShots',
+  screenshotPath: `./${reportsDir}/errorShots`,
   //
   // Set a base URL in order to shorten url command calls. If your `url` parameter starts
   // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
@@ -121,7 +125,12 @@ exports.config = {
   // Test reporter for stdout.
   // The only one supported by default is 'dot'
   // see also: https://webdriver.io/docs/dot-reporter.html
-  reporters: ['spec'],
+  reporters: [
+    'spec',
+    ['cucumberjs-json', {
+      jsonFolder: `./${reportsDir}/json`,
+    }],
+  ],
 
   // If you are using Cucumber you need to specify the location of your step definitions.
   cucumberOpts: {
@@ -156,8 +165,9 @@ exports.config = {
    * @param {Object} config wdio configuration object
    * @param {Array.<Object>} capabilities list of capabilities details
    */
-  // onPrepare: function (config, capabilities) {
-  // },
+  onPrepare() {
+    removeSync(`./${reportsDir}`);
+  },
   /**
    * Gets executed just before initialising the webdriver session and test framework. It allows you
    * to manipulate configurations depending on the capability or spec.
@@ -252,8 +262,14 @@ exports.config = {
    * @param {Array.<Object>} capabilities list of capabilities details
    * @param {<Object>} results object containing test results
    */
-  // onComplete: function(exitCode, config, capabilities, results) {
-  // },
+  onComplete() {
+    // Generate the report when it all tests are done
+    generate({
+      jsonDir: `./${reportsDir}/json`,
+      reportPath: `./${reportsDir}/html`,
+      // for more options see https://github.com/wswebcreation/multiple-cucumber-html-reporter#options
+    });
+  },
   /**
    * Gets executed when a refresh happens.
    * @param {String} oldSessionId session ID of the old session
@@ -272,7 +288,7 @@ exports.config = {
   // },
   afterStep(uri, feature, { passed }) {
     if (!passed) {
-      browser.saveScreenshot(`${this.screenshotPath}/screenshot-${uuidv4()}.png`);
+      browser.saveScreenshot(`./${this.screenshotPath}/screenshot-${uuidv4()}.png`);
     }
   },
   // afterScenario: function (uri, feature, scenario, result, sourceLocation) {

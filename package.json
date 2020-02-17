@@ -15,7 +15,7 @@
     "test": "jest --config jest.config.json",
     "coverage": "jest --config jest.config.json --coverage",
     "e2e": "wdio run test/e2e/wdio.conf.js",
-    "quality": "es6-plato -t 'project-title' -d report -r src/",
+    "quality": "es6-plato -t 'project-title' -d reports/quality -r src/",
     "build": "NODE_ENV=production webpack --config webpack.config.js -p --display-modules"
   },
   "husky": {
@@ -63,12 +63,14 @@
     "eslint-plugin-react": "^7.18.0",
     "eslint-plugin-react-hooks": "^1.7.0",
     "file-loader": "^5.0.2",
+    "fs-extra": "^8.1.0",
     "glob": "^7.1.6",
     "html-webpack-plugin": "^3.2.0",
     "husky": "^4.2.1",
     "jest": "^25.1.0",
     "mini-css-extract-plugin": "^0.9.0",
     "mkdirp": "^1.0.3",
+    "multiple-cucumber-html-reporter": "^1.14.0",
     "node-sass": "^4.13.1",
     "npm-run-all": "^4.1.5",
     "postcss-cli": "^7.1.0",
@@ -80,6 +82,7 @@
     "stylelint-config-sass-guidelines": "^6.2.0",
     "stylelint-scss": "^3.14.2",
     "uuid": "^3.4.0",
+    "wdio-cucumberjs-json-reporter": "^1.1.3",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.10.1"
