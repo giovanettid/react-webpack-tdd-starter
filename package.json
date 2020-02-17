@@ -15,7 +15,7 @@
     "test": "jest --config jest.config.json",
     "coverage": "jest --config jest.config.json --coverage",
     "e2e": "wdio run test/e2e/wdio.conf.js",
-    "quality": "es6-plato -t 'project-title' -d report -r src/",
+    "quality": "es6-plato -t 'project-title' -d reports/quality -r src/",
     "build": "NODE_ENV=production webpack --config webpack.config.js -p --display-modules"
   },
   "husky": {

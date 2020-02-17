@@ -5,6 +5,7 @@
     "!src/components/main.jsx"
   ],
   "setupFilesAfterEnv": ["<rootDir>/test/unit/setup-test-framework-script.js"],
+  "coverageDirectory": "reports/coverage",
   "coverageThreshold": {
     "global": {
       "branches": 100,

@@ -1,5 +1,4 @@
 /build/**
-/coverage/**
 /reports/**
 /node_modules/**
 /docs/**
