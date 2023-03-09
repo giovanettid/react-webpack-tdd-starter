@@ -27,8 +27,8 @@
 * see [CHANGELOG](CHANGELOG.md)
 
 ## Testé avec
-* npm 6
-* node 12
+* npm 9
+* node 18
 
 ## Installation
 
