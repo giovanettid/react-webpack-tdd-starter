@@ -16,12 +16,8 @@
     "coverage": "jest --config jest.config.json --coverage",
     "e2e": "wdio run test/e2e/wdio.conf.js",
     "quality": "es6-plato -t 'project-title' -d reports/quality -r src/",
-    "build": "NODE_ENV=production webpack --config webpack.config.js"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "run-p lint coverage"
-    }
+    "build": "NODE_ENV=production webpack --config webpack.config.js",
+    "prepare": "husky install"
   },
   "author": "Didier Giovanetti",
   "license": "ISC",
@@ -64,7 +60,7 @@
     "fs-extra": "^8.1.0",
     "glob": "^7.1.6",
     "html-webpack-plugin": "^5.5.0",
-    "husky": "^4.2.1",
+    "husky": "^8.0.3",
     "jest": "^25.1.0",
     "mini-css-extract-plugin": "^2.7.3",
     "mkdirp": "^1.0.3",
