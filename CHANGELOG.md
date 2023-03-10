@@ -1,3 +1,22 @@
+### Version 1.7.0
+
+#### Features
+
+* tested with node 18
+* update webpack to version 5
+* replace webpack hash by contenthash
+* update wedriverio to version 7
+* migrate wedriverio tests to async await
+* update cucumber to version 9
+* update & re-configure husky
+
+#### Minor
+
+* webpack file loader no longer useful in webpack 5
+* babel plugin proposal-class-properties no longer useful in ES2022
+* update babel dependencies
+* update chai dependency
+
 ### Version 1.6.0
 
 #### Features
