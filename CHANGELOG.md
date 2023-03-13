@@ -1,3 +1,21 @@
+### Version 1.8.0
+
+#### Features
+
+* update eslint to version 8
+* add eslint jest plugin
+* update stylelint to version 15
+* replace stylelint-config-sass-guidelines by stylelint-config-standard-scss
+
+#### Removed
+
+* remove plato dashboard
+
+#### Minor
+
+* update autoprefixer, browser-sync dependencies
+* update miscellaneous utilities
+
 ### Version 1.7.0
 
 #### Features
