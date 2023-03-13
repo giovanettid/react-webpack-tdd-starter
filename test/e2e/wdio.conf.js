@@ -1,6 +1,6 @@
-const glob = require('glob');
+const { globSync } = require('glob');
 const mkdirp = require('mkdirp');
-const uuidv4 = require('uuid/v4');
+const { v4: uuidv4 } = require('uuid');
 const chai = require('chai');
 const { generate } = require('multiple-cucumber-html-reporter');
 const { removeSync } = require('fs-extra');
@@ -134,7 +134,7 @@ exports.config = {
 
   // If you are using Cucumber you need to specify the location of your step definitions.
   cucumberOpts: {
-    require: glob.sync('test/e2e/step_definitions/**/*.js'), // <string[]> (file/dir) require files before executing features
+    require: globSync('test/e2e/step_definitions/**/*.js'), // <string[]> (file/dir) require files before executing features
     backtrace: false, // <boolean> show full backtrace for errors
     requireModule: ['@babel/register'],
     dryRun: false, // <boolean> invoke formatters without executing steps
