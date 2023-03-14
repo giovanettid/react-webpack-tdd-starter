@@ -5,5 +5,5 @@ When(/^Go js starter$/, async () => {
 });
 
 Then(/^Says "(.*)"$/, async (starter) => {
-  expect(await $('.starter').getText()).to.equal(starter);
+  expect(await $('.starter').getText()).toBe(starter);
 });

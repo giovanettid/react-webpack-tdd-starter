@@ -4,7 +4,6 @@ module.exports = {
     it: false,
     beforeAll: false,
     expect: false,
-    shallow: false,
     browser: false,
     $: false,
   },

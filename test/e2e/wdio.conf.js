@@ -1,7 +1,6 @@
 const { globSync } = require('glob');
 const mkdirp = require('mkdirp');
 const { v4: uuidv4 } = require('uuid');
-const chai = require('chai');
 const { generate } = require('multiple-cucumber-html-reporter');
 const { removeSync } = require('fs-extra');
 
@@ -185,7 +184,6 @@ exports.config = {
    */
   before() {
     mkdirp.sync(this.screenshotPath);
-    global.expect = chai.expect;
   },
   /**
    * Runs before a WebdriverIO command gets executed.
