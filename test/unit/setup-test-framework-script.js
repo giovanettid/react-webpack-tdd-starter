@@ -1,11 +1,6 @@
 import 'raf/polyfill';
+import '@testing-library/jest-dom';
 
-import { configure, shallow } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
+import sinon from 'sinon';
 
-import { expect } from 'chai';
-
-global.expect = expect;
-global.shallow = shallow;
-
-configure({ adapter: new Adapter() });
+global.sinon = sinon;
