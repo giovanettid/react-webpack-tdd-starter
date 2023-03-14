@@ -1,4 +1,5 @@
 {
+  "testEnvironment": "jsdom",
   "testMatch": ["**/unit/**/*test.js?(x)"],
     "collectCoverageFrom": [
     "src/components/**/*.js?(x)",

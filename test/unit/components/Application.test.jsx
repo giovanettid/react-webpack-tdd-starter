@@ -1,4 +1,3 @@
-import React from 'react';
 import Application from 'components/Application';
 import Configuration from 'components/Configuration';
 

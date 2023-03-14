@@ -1,11 +1,9 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import Application from 'components/Application';
 import Configuration from 'components/Configuration';
 
 import 'styles/main.scss';
 
-ReactDOM.render(
-  <Application configuration={() => ({ ...new Configuration() })} />,
-  document.getElementById('root'),
-);
+const container = document.getElementById('root');
+const root = createRoot(container);
+root.render(<Application configuration={() => ({ ...new Configuration() })} />);
