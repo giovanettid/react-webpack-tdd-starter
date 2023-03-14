@@ -1,3 +1,20 @@
+### Version 1.9.0
+
+#### Features
+
+* update to react version 18
+* update to jest version 29
+* replace enzyme by react testing library
+
+#### Removed
+
+* remove chai assertions
+
+#### Minor
+
+* update polyfills
+* update sinon dependency
+
 ### Version 1.8.0
 
 #### Features
