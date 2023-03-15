@@ -1,3 +1,9 @@
+### Version 1.9.1
+
+#### Fix
+
+* fix vulnerabilities
+
 ### Version 1.9.0
 
 #### Features
