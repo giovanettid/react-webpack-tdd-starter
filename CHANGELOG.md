@@ -1,3 +1,12 @@
+### Version 1.9.2
+
+#### Minor
+
+* replace deprecated node-sass by sass
+* add jest-sinon assertions
+* add eslint tests plugins
+* reorg eslint configuration
+
 ### Version 1.9.1
 
 #### Fix
