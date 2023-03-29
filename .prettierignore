@@ -1,6 +1,6 @@
 # Ignore artifacts:
-build/
-reports/
+/build
+/reports
 
 # IDE
 .idea
