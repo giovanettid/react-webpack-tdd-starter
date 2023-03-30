@@ -19,7 +19,8 @@
   - transpiler: [babel](https://babeljs.io)
   - bundler: [webpack 5](https://webpack.js.org)
   - linters: [eslint](https://eslint.org), [stylelint](https://stylelint.io)
-  - git hooks: [husky](https://github.com/typicode/husky)
+  - code formatters: [editorconfig](https://editorconfig.org), [prettier](https://prettier.io)
+  - git hooks: [husky](https://github.com/typicode/husky), [lint-staged](https://github.com/okonet/lint-staged)
 
 ## Starter features
 
