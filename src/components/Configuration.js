@@ -1,5 +1,5 @@
 export default class Configuration {
   constructor() {
-    this.name = 'starter';
+    this.name = 'js starter...';
   }
 }
