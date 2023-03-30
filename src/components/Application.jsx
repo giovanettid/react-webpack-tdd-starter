@@ -1,19 +1,17 @@
-import React from 'react';
+import { useState } from 'react';
 import PropTypes from 'prop-types';
 
 import 'components/Application.scss';
 
-export default class Application extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = props.configuration();
-  }
+function Application({ configuration }) {
+  const [state] = useState(configuration());
+  const { name } = state;
 
-  render() {
-    return <div className="starter">js starter...</div>;
-  }
+  return <div className="starter">{name}</div>;
 }
 
 Application.propTypes = {
   configuration: PropTypes.func.isRequired,
 };
+
+export default Application;

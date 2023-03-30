@@ -6,6 +6,10 @@
     "type": "git",
     "url": "git://github.com/giovanettid/js-starter.git"
   },
+  "engines": {
+    "npm": ">=9.0.0",
+    "node": ">=18.0.0"
+  },
   "scripts": {
     "start": "webpack-dev-server",
     "server:build": "npm run build && browser-sync start -s $npm_package_config_buildDir",
