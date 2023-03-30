@@ -1,3 +1,17 @@
+### Version 1.10.0
+
+#### Features
+
+- add prettier code formatter
+- use lint-staged on pre-commit hook
+
+#### Minor
+
+- check node and npm version on install
+- align .ignore files
+- align config files extensions
+- Application component becomes functional component
+
 ### Version 1.9.2
 
 #### Minor
