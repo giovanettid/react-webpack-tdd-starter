@@ -1,3 +1,9 @@
+### Version 1.10.1
+
+#### Minor
+
+- prettier order imports
+
 ### Version 1.10.0
 
 #### Features
